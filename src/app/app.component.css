@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.vertical-center-updated {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 95vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
+}
+.vertical-center {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
+}
+.jumbotron {
+  background: url("../assets/ales-nesetril-ex_p4AaBxbs-unsplash.jpg");
+  background-size: 100% 100%;
+  /* animation: gradient 15s ease infinite; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.custom-form {
+  padding: 5%;
+}
+
+.head {
+  text-align: center;
+  margin: 5%;
+  font-size: 4rem;
+  padding: 2%;
+  color: white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+.small_head {
+  text-align: center;
+  margin: 5%;
+  padding: 4%;
+  font-size: 1.25rem;
+  color: white;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
+}
+.nav-background {
+    background-color: black;
+}
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+.button {
+  background-image: url('../assets/btn_google_signin_dark_normal_web@2x.png');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 44px;
+}
+.googleImg {
+  margin:1px;
+  margin-right: 15px;
+  background-color:white;
+  padding: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+.googleImgText {
+  font-family: 'Roboto', sans-serif;
+}
+.alignment {
+  margin: auto;
+}
+.profile {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 5%;
+}
+.logo {
+  background-color: white;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 2%;
+  width: 5vh;
+  margin-left: 50%;
+}
+.brand {
+  margin-left: 2%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: xx-large;
+}
+.loginButton {
+  margin-right: 2%;
+}
+.tabs {
+  background-color: white;
+  min-height: 20vh;
+  border-radius: 1rem;
+}
+.text {
+  color: white;
+  margin-right: 5%;
+}
+.credit-form {
+  align-items: center;
+}
+.balance {
+  text-align: center;
+}
+.addBalance {
+  text-align: center;
+  display: flex;
+  align-content: center;
+}
