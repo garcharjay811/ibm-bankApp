@@ -15,27 +15,25 @@ export class OAuthComponent implements OnInit {
     private userId: string;
 
     constructor(public authService: AuthService, private cookieService: CookieService, private router: Router, private activatedRoute: ActivatedRoute) { }
-
     ngOnInit() {
-        console.log("Entered");
-        // this.activatedRoute.queryParams.subscribe(params => {
-        //     this.responseData = JSON.parse(params.token);
-        //     console.log(this.responseData);
-        //     console.log("Nice!");
-        // });
-        // const expiresInDuration = this.responseData.expiresIn;
-        // this.token = this.responseData.token;
-        // this.userId = this.responseData.userId;
+        this.activatedRoute.queryParams.subscribe(params => {
+            this.responseData = JSON.parse(params.token);
+            // console.log(this.responseData);
+            // console.log("Nice!");
+        });
+        const expiresInDuration = this.responseData.expiresIn;
+        this.token = this.responseData.token;
+        this.userId = this.responseData.userId;
         // console.log(this.responseData.token);
         // console.log(this.responseData.userId);
         // console.log(this.responseData.expiresIn);
-        // const now = new Date();
-        // const expirationDate = new Date(
-        //     now.getTime() + expiresInDuration * 1000
-        // );
-        // this.saveAuthData(this.token, expirationDate, this.userId);
-        // this.authService.autoAuthUser();
-        // this.router.navigate(['/']);
+        const now = new Date();
+        const expirationDate = new Date(
+            now.getTime() + expiresInDuration * 1000
+        );
+        this.saveAuthData(this.token, expirationDate, this.userId);
+        this.authService.autoAuthUser();
+        this.router.navigate(['/']);
     }
 
     private saveAuthData(token: string, expirationDate: Date, userId: string) {

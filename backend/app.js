@@ -1,4 +1,5 @@
 const path = require("path");
+const cors = require('cors');
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -8,10 +9,14 @@ const jwt = require("jsonwebtoken");
 const url = require("url");
 require('./controller/user');
 
+const appRoutes = require("./routes/routes");
+
 // const eventsRoutes = require("./routes/events");
 // const userRoutes = require("./routes/user");
 
 const app = express();
+app.use(cors());
+app.options('*', cors());
 
 mongoose
   .connect(
@@ -41,7 +46,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use("/api/user", userRoutes);
+app.use("/api/user", appRoutes);
 
 app.use(passport.initialize());
 

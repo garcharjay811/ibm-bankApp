@@ -7,25 +7,26 @@ import { AuthService } from '../auth/auth.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
-  isLoading = false;
-  private authStatusSub: Subscription;
+export class HomeComponent implements OnInit {
+  // isLoading = false;
+  // private authStatusSub: Subscription;
 
-  constructor(public authService: AuthService) {}
+  // constructor(public authService: AuthService) {}
 
   ngOnInit() {
-    this.authStatusSub = this.authService.getAuthStatusListener().subscribe(
-      authStatus => {
-        this.isLoading = false;
-      }
-    );
+    // this.authStatusSub = this.authService.getAuthStatusListener().subscribe(
+    //   authStatus => {
+    //     this.isLoading = false;
+    //   }
+    // );
+    console.log("Hi");
   }
 
   googleLogin() {
-    this.authService.googleLogin();
+    // this.authService.googleLogin();
   }
 
-  ngOnDestroy() {
-    this.authStatusSub.unsubscribe();
-  }
+  // ngOnDestroy() {
+    // this.authStatusSub.unsubscribe();
+  // }
 }

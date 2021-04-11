@@ -62,6 +62,7 @@ export class AuthService {
             this.setAuthTimer(expiresIn / 1000);
             this.authStatusListener.next(true);
         }
+        return true;
     }
 
     getUserDetails(id: string) {
@@ -69,11 +70,7 @@ export class AuthService {
             email: string;
             firstName: string;
             lastName: string;
-            phoneNum: string;
-            interests: string[];
-            invitations: [{ accepted: boolean, from: string, eventId: string }];
-            city: string;
-            eventsJoined: any;
+            balance: number;
         }>(BACKEND_URL + 'user-details/' + id);
     }
     getEventUpdateListener() {
@@ -88,7 +85,6 @@ export class AuthService {
         this.userId = null;
         clearTimeout(this.tokenTimer);
         this.clearAuthData();
-        this.router.navigate(['/']);
     }
 
     private setAuthTimer(duration: number) {

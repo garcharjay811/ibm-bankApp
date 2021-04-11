@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
 html,
 body {
@@ -8,6 +9,14 @@ body {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+}
+.vertical-center-updated {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 95vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
 }
 .vertical-center {
   min-height: 100%; /* Fallback for browsers do NOT support vh unit */
@@ -45,6 +54,7 @@ body {
   font-size: 4rem;
   padding: 2%;
   color: white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
@@ -78,6 +88,50 @@ body {
   padding: 1px;
   font-family: 'Roboto', sans-serif;
 }
+.googleImgText {
+  font-family: 'Roboto', sans-serif;
+}
 .alignment {
   margin: auto;
+}
+.profile {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 5%;
+}
+.logo {
+  background-color: white;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 2%;
+  width: 5vh;
+  margin-left: 50%;
+}
+.brand {
+  margin-left: 2%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: xx-large;
+}
+.loginButton {
+  margin-right: 2%;
+}
+.tabs {
+  background-color: white;
+  min-height: 20vh;
+  border-radius: 1rem;
+}
+.text {
+  color: white;
+  margin-right: 5%;
+}
+.credit-form {
+  align-items: center;
+}
+.balance {
+  text-align: center;
+}
+.addBalance {
+  text-align: center;
+  display: flex;
+  align-content: center;
 }
