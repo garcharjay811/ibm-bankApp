@@ -20,7 +20,7 @@ app.options('*', cors());
 
 mongoose
   .connect(
-    "mongodb+srv://jay_garchar:DMaKZqVfHc932Lpy@cluster0.qfs3b.mongodb.net/bankAppDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+    "", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Connected to database!");
   })
