@@ -12,8 +12,8 @@ passport.deserializeUser(function (id, done) {
 
 passport.use(
     new GoogleStrategy({
-        clientID: "618840554237-42lmi03gta5otvct0j2npsddnjidtorm.apps.googleusercontent.com",
-        clientSecret: "B1XQ-T2ph-JJjvSrThYV71up",
+        clientID: "",
+        clientSecret: "",
         callbackURL: "/auth/google/callback",
     }, function (req, token, refreshToken, data, done) {
         console.log(data.name.familyName.value);
